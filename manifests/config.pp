@@ -58,4 +58,13 @@ class tsm::config {
       ensure => present,
     }
   }
+
+  if $::tsm::virtualmountpoints {
+    concat::fragment { 'dsm_sys_virtualmountpoints':
+      target  => $::tsm::config,
+      content => template($::tsm::config_virtualmountpoints),
+      order   => '32',
+    }
+  }
+
 }

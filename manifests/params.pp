@@ -28,11 +28,12 @@ class tsm::params {
   $comm_method         = 'TCPip'
   $tcp_port            = '1500'
 
-  $config_header_template = 'tsm/dsm.sys_header.erb'
-  $config_global_template = 'tsm/dsm.sys_global.erb'
-  $config_stanza_template = 'tsm/dsm.sys_stanza.erb'
-  $config_opt_template    = 'tsm/dsm.opt.erb'
-  $config_replace         = false
+  $config_header_template    = 'tsm/dsm.sys_header.erb'
+  $config_global_template    = 'tsm/dsm.sys_global.erb'
+  $config_stanza_template    = 'tsm/dsm.sys_stanza.erb'
+  $config_opt_template       = 'tsm/dsm.opt.erb'
+  $config_virtualmountpoints = 'tsm/virtualmountpoints.erb'
+  $config_replace            = false
 
   $inclexcl_replace    = false
 
