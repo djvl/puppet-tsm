@@ -1,5 +1,5 @@
 * virtualmountpoints
 
-<% @virtualmountpoints.each do | line | -%>
+<%- scope['::tsm::virtualmountpoints'].sort.each do | line | -%>
 <%= line %>
-<% end -%>
+<%- end -%>
