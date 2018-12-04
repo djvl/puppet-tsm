@@ -7,7 +7,6 @@ exclude /var/run/.../*
 exclude /var/spool/.../*
 exclude /.../core
 exclude /.../tmp/.../*
-exclude.dir /mnt
 exclude.dir /proc
 exclude.dir /sys
 exclude.fs /dev/shm
