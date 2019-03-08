@@ -271,6 +271,7 @@ class tsm (
   $config_opt_hash         = undef,
   $stanzas                 = {},
   $virtualmountpoints      = undef,
+  $algorithm_password      = undef,
   ) inherits tsm::params {
 
   validate_string($package_ensure)

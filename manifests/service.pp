@@ -44,11 +44,11 @@ class tsm::service {
       }
     }
 
-    if $::tsm::set_initial_password == true {
-      $password = tsm_generate_rand_string()
+    if $::tsm::set_initial_password == true and $::tsm::algorithm_password {
+      # $password = tsm_generate_rand_string()
 
       exec {'generate-tsm.pwd':
-        command => "dsmc set password ${::tsm::initial_password} ${password}",
+        command => "dsmc set password ${::tsm::initial_password} \'${::tsm::algorithm_password}\'",
         creates => $::tsm::tsm_pwd,
         path    => ['/bin', '/usr/bin']
       }
